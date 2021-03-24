@@ -5,11 +5,10 @@ environments:
     - jx-values.yaml
 namespace: nginx
 repositories:
-repositories:
 - name: local
   url: http://192.168.122.90/chartrepo/library
 releases:
-- chart: ingress-nginx/ingress-nginx
+- chart: local/ingress-nginx
   version: 3.12.0
   name: nginx-ingress
   values:
