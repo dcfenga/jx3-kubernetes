@@ -25,6 +25,7 @@ spec:
         - name: XDG_CONFIG_HOME
           value: /workspace/xdg_config
         image: ghcr.io/jenkins-x/jx-boot:3.1.334
+        imagePullPolicy: IfNotPresent
         name: git-clone
         volumeMounts:
         - mountPath: /workspace
@@ -43,7 +44,7 @@ spec:
             name: jx-boot-job-env-vars
             optional: true
         image: ghcr.io/jenkins-x/jx-boot:3.1.334
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         name: job
         volumeMounts:
         - mountPath: /workspace
