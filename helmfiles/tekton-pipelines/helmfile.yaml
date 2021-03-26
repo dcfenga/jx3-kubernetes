@@ -5,10 +5,10 @@ environments:
     - jx-values.yaml
 namespace: tekton-pipelines
 repositories:
-- name: cdf
-  url: https://cdfoundation.github.io/tekton-helm-chart
+- name: local
+  url: http://192.168.122.90/chartrepo/library
 releases:
-- chart: cdf/tekton-pipeline
+- chart: local/tekton-pipeline
   version: 0.22.0
   name: tekton-pipeline
   values:
